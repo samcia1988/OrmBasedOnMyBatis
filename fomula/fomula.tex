@@ -1,0 +1,26 @@
+\documentclass{report}
+
+\begin{document}
+
+\begin{equation}
+R \bowtie_\theta S=\{r \cup s:r \in R,s \in S,f_\theta(t \cup s)\}
+\end{equation}
+\begin{equation}
+\sigma_\phi(_{\sigma_{\phi_1}(R) \times \sigma_{\phi_2}(S)})=\{r \cup s:r \in R,s \in S,f_\phi(t,s) \cap f_{\phi_1}(r) \cap f_{\phi_2}(s)\}
+\end{equation}
+\begin{equation}
+f_\theta(t \cup s)=f_{\theta_1}(t,s) \cap f_{\theta_2}(t) \cap f_{\theta_3}(s)
+\end{equation}
+\begin{equation}
+\left.
+\begin{array}{lll}
+f_{\theta_1}(t,s)=f_\phi(t,s)\\
+f_{\theta_2}(t)=f_{\phi_1}(t)\\
+f_{\theta_3}(s)=f_{\phi_2}(s)
+\end{array} 
+\right\}
+\Rightarrow
+R \bowtie_\theta S=\sigma_\phi(\sigma_{\phi_1}(R) \times \sigma_{\phi_2}(S))
+\end{equation}
+
+\end{document}
