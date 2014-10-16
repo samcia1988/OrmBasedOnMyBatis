@@ -1,0 +1,77 @@
+digraph G{  
+    node[  
+        shape="record"  
+    ]
+    DataModelDefinition[
+        label="{Data Model Definition}"
+    ]
+
+    DataModelInstance[
+        label="{Data Model Instance}"
+    ]
+
+    MappingExtension[
+        label="{Mapping Extension}"
+    ]
+
+    MyBatis[
+        label="{Framework:MyBatis}"
+    ]
+
+    Database[
+        label="{Database}"
+    ]
+
+    Plugins{
+        label="{Plugins:MyBatis}"
+    }
+   
+    edge[  
+        arrowhead="empty"
+        style="bold"
+        label=""  
+    ]
+    DataModelDefinition->MappingExtension
+
+    edge[
+        arrowhead="empty"
+        style="bold"
+        label=""
+    ]
+    DataModelInstance->MyBatis
+
+    edge[
+        arrowhead="empty"
+        style="bold"
+        label=""
+    ]
+    MappingExtension->MyBatis
+    
+    edge[
+        arrowhead="empty"
+        style="bold"
+        label=""
+    ]
+    MyBatis->Database
+
+    edge[
+        arrowhead="empty"
+        style="bold"
+        label=""
+    ]
+    Database->MyBatis
+
+    edge[
+        arrowhead="empty"
+        style="dotted"
+        label=""
+    ]
+    DataModelDefinition->DataModelInstance
+
+    edge[
+        arrowhead="empty"
+        style="bold"
+        label=""
+    ]
+    Plugins->MyBatis
+}  

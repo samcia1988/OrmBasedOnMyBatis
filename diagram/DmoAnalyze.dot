@@ -1,0 +1,46 @@
+digraph G{
+	node[  
+        shape="record"  
+    ]
+
+    DmoClass[
+    	label="{Dmo Class}"
+    ]
+
+    TableMap[
+    	label="{TableMap|<MappingDmo>\<Methods\>
+MappingDmo|<Columns>\<Fieds\>
+ListColumn}"
+    ]
+
+    Column[
+    	label="{<Column>Column|\<Fields\>
+name
+length
+isNullable
+isPk
+strategy
+generator
+dmoFieldName
+dmoFieldClass}"
+    ]
+
+    edge[
+        arrowhead="vee"
+        style="dotted"
+        label="1"
+    ]
+    DmoClass->TableMap:MappingDmo
+    edge[
+        arrowhead="vee"
+        style="dotted"
+        label="2"
+    ]    
+    TableMap:MappingDmo->Column:Column
+    edge[
+        arrowhead="vee"
+        style="dotted"
+        label="3"
+    ]
+    Column:Column->TableMap:Columns
+}

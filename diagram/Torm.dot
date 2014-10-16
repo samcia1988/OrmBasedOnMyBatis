@@ -1,0 +1,66 @@
+digraph G{  
+    node[  
+        shape="record"  
+    ]
+    DmoClass[
+        label="{DmoClass}"
+    ]
+
+    TableMap[
+        label="{TableMap}"
+    ]
+
+    TormInterface[
+        label="{TormInterface}"
+    ]
+
+    TormProviderClass[
+        label="{TormProviderClass}"
+    ]
+
+    DaoTorm[
+        label="{DaoTorm}"
+    ]
+
+    KxdFramework[
+        label="{Framework:Mybatis}"
+    ]
+   
+
+    edge[  
+        arrowhead="empty"
+        style="bold"
+        label="Annotation analyze"  
+    ]
+    DmoClass->TableMap
+
+    edge[
+        arrowhead="empty"
+        style="bold"
+        label="Create dynamic class in JVM"
+    ]
+    TableMap->TormProviderClass
+    TableMap->TormInterface
+
+    edge[
+        arrowhead="empty"
+        style="bold"
+        label=""
+    ]
+    TormProviderClass->TormInterface
+    
+    edge[
+        arrowhead="empty"
+        style="bold"
+        label="polymered by"
+    ]
+    TormInterface->DaoTorm
+
+    edge[
+        arrowhead="empty"
+        style="bold"
+        label=""
+    ]
+    DaoTorm->KxdFramework
+
+}  
