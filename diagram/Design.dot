@@ -15,16 +15,12 @@ digraph G{
     ]
 
     MyBatis[
-        label="{Framework:MyBatis}"
+        label="{{<P>Plugins|Framework}|MyBatis}"
     ]
 
     Database[
         label="{Database}"
     ]
-
-    Plugins{
-        label="{Plugins:MyBatis}"
-    }
    
     edge[  
         arrowhead="empty"
@@ -38,14 +34,14 @@ digraph G{
         style="bold"
         label=""
     ]
-    DataModelInstance->MyBatis
+    DataModelInstance->MyBatis:P
 
     edge[
         arrowhead="empty"
         style="bold"
         label=""
     ]
-    MappingExtension->MyBatis
+    MappingExtension->MyBatis:P
     
     edge[
         arrowhead="empty"
@@ -68,10 +64,4 @@ digraph G{
     ]
     DataModelDefinition->DataModelInstance
 
-    edge[
-        arrowhead="empty"
-        style="bold"
-        label=""
-    ]
-    Plugins->MyBatis
 }  
